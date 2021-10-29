@@ -213,6 +213,11 @@ etag@~1.8.1:
   resolved "https://registry.yarnpkg.com/etag/-/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
   integrity sha1-Qa4u62XvpiJorr/qg6x9eSmbCIc=
 
+events@^3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/events/-/events-3.3.0.tgz#31a95ad0a924e2d2c419a813aeb2c4e878ea7400"
+  integrity sha512-mQw+2fkQbALzQ7V0MY0IqdnXNOeTtP4r0lN9z7AAawCXgqea7bDii20AYrIBrFd/Hx0M2Ocz6S111CaFkUcb0Q==
+
 express@^4.15.4:
   version "4.17.1"
   resolved "https://registry.yarnpkg.com/express/-/express-4.17.1.tgz#4491fc38605cf51f8629d39c2b5d026f98a4c134"
@@ -288,6 +293,28 @@ glob@^7.1.3:
     minimatch "^3.0.4"
     once "^1.3.0"
     path-is-absolute "^1.0.0"
+
+graphology-gexf@^0.8.1:
+  version "0.8.1"
+  resolved "https://registry.yarnpkg.com/graphology-gexf/-/graphology-gexf-0.8.1.tgz#6149198e34f5c1dafc3e6b560d68a4beaad4e43c"
+  integrity sha512-hfMwu7reu/TjoSJ8ITQTyMlo8JZgh58bZbPwzDMXv96AfD9VE3AFopdLykGd5qkXNkg4cXW2OOV3K9BOJf8cTw==
+  dependencies:
+    graphology-utils "^2.1.0"
+    xml-writer "^1.7.0"
+    xmldom "^0.6.0"
+
+graphology-utils@^2.1.0:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/graphology-utils/-/graphology-utils-2.1.2.tgz#5a7837671d146e9d9ac12df2b15559b5a76a3ce1"
+  integrity sha512-/GI90k+7yhX6p6tm5Nsz+4Bv+d+Du1meqLk5vqrTku8KBMhegk8S/4yNmB8buMW/O7KObjiZVn4vEn40m9h+jA==
+
+graphology@^0.21.1:
+  version "0.21.1"
+  resolved "https://registry.yarnpkg.com/graphology/-/graphology-0.21.1.tgz#042dc71d572e9bb5421b8ebddc879d822f5ac49f"
+  integrity sha512-XCWNarKe99COqjk2D1WIDzZ8Yx9g2N/5NcV38egbvP9Hoh4ePblR02Wtr6ZCu2RshxeFRo0WkBlXxLX3QAhdTA==
+  dependencies:
+    events "^3.3.0"
+    obliterator "^1.6.1"
 
 http-errors@1.7.2:
   version "1.7.2"
@@ -416,6 +443,11 @@ negotiator@0.6.2:
   version "0.6.2"
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.2.tgz#feacf7ccf525a77ae9634436a64883ffeca346fb"
   integrity sha512-hZXc7K2e+PgeI1eDBe/10Ard4ekbfrrqG8Ep+8Jmf4JID2bNg7NvCPOZN+kfF574pFQI7mum2AUqDidoKqcTOw==
+
+obliterator@^1.6.1:
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/obliterator/-/obliterator-1.6.1.tgz#dea03e8ab821f6c4d96a299e17aef6a3af994ef3"
+  integrity sha512-9WXswnqINnnhOG/5SLimUlzuU1hFJUc8zkwyD59Sd+dPOMf05PmnYG/d6Q7HZ+KmgkZJa1PxRso6QdM3sTNHig==
 
 on-finished@~2.3.0:
   version "2.3.0"
@@ -567,3 +599,13 @@ wrappy@1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/wrappy/-/wrappy-1.0.2.tgz#b5243d8f3ec1aa35f1364605bc0d1036e30ab69f"
   integrity sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=
+
+xml-writer@^1.7.0:
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/xml-writer/-/xml-writer-1.7.0.tgz#b76f1d591c16a2634ebdb703c7bdbd0fd6819065"
+  integrity sha1-t28dWRwWomNOvbcDx729D9aBkGU=
+
+xmldom@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/xmldom/-/xmldom-0.6.0.tgz#43a96ecb8beece991cef382c08397d82d4d0c46f"
+  integrity sha512-iAcin401y58LckRZ0TkI4k0VSM1Qg0KGSc3i8rU+xrxe19A/BN1zHyVSJY7uoutVlaTSzYyk/v5AmkewAP7jtg==
