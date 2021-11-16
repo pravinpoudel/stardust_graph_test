@@ -221,6 +221,7 @@ var Binding = (function () {
                     else {
                         for (var i = 0; i < n; i++) {
                             var result = types_1.getBindingValue(f(data[i], i));
+                            
                             for (var k = 0; k < rep; k++) {
                                 for (var j = 0; j < p; j++) {
                                     array[ptr++] = result[j];
@@ -9478,7 +9479,6 @@ function compileProgram(GL, vsCode, fsCode) {
     GL.compileShader(vsShader);
     var success = GL.getShaderParameter(vsShader, GL.COMPILE_STATUS);
     if (!success) {
-        console.log("Vertex shader code is:", vsCode);
         throw new stardust_core_1.RuntimeError("could not compile vertex shader: " + GL.getShaderInfoLog(vsShader));
     }
     // Fragment shader

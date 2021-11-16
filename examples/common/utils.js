@@ -46,7 +46,7 @@ function measureFPS(renderFunction) {
     var doFrame = function() {
         if(totalFrames >= count) {
             var t1 = new Date().getTime();
-            var fps = totalFrames / ((t1 - t0) / 1000);
+            var fps = totalFrames / ((t1 - t0) / 100);
             d3.select(".fps").text("FPS: " + fps.toFixed(1));
             return;
         }

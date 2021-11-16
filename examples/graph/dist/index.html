@@ -54,17 +54,16 @@
   var snodesSelected = Stardust.mark.create(Stardust.mark.circle(8), platform);
   var sedges = Stardust.mark.create(Stardust.mark.line(), platform);
 
-  loadData("facebook_1912_clusters.json", (data) => {
+  loadData("mygraph_4_regex.json", (data) => {
     var nodes = data.nodes;
     var edges = data.edges;
+    console.log(edges);
     var N = nodes.length;
 
     for (var i = 0; i < N; i++) {
-      nodes[i].index = i;
       nodes[i].x = Math.random() * width;
       nodes[i].y = Math.random() * height;
     }
-
     let colors = [
       [31, 119, 180],
       [255, 127, 14],
@@ -101,13 +100,13 @@
         })
       )
       .force("charge", d3.forceManyBody())
-      .force("forceX", d3.forceX(width / 2))
+      .force("forceX", d3.forceX(width / 2)) //for attracting element to a given point
       .force("forceY", d3.forceY(height / 2));
 
     force.nodes(nodes);
     force.force("link").links(edges);
-
-    force.force("forceX").strength(0.5);
+    console.log("i am here");
+    force.force("forceX").strength(0.5); //strength of aatraction
     force.force("forceY").strength(0.5);
     force.force("link").distance(50);
     force.force("link").strength(0.05);
@@ -147,10 +146,12 @@
     makeSlider("Link Distance", "linkDistance", 0, 200, 50);
     makeSlider("Link Strength", "linkStrength", 0, 0.2, 0.05);
 
+    console.log(Stardust.array("Vector2"));
     var positions = Stardust.array("Vector2")
       .value((d) => [d.x, d.y])
       .data(nodes);
 
+    console.log(Stardust);
     var positionScale = Stardust.scale
       .custom("array(pos, value)")
       .attr("pos", "Vector2Array", positions);
